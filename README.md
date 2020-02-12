@@ -245,9 +245,25 @@ Sample results:
 ```
 
 ### Restricted Assets
+* Global list of restricted assets:
+
+  `/assets/restricted`
+
+  (supports optional `verbose`, `size` and `skip` (pagination) parameters)
+
+* Global list of qualifier assets (tags):
+
+  `/assets/tags`
+
+  OR
+
+  `/assets/qualifiers`
+
+  (supports optional `verbose`, `size` and `skip` (pagination) parameters)
+
 * Global list of restricted assets which have been frozen:
 
-  `/assets/restrictions`
+  `/assets/frozen`
 
 * Test a prospective verifier string to see if it's valid (syntax, existing tags, etc.):
   
@@ -265,7 +281,7 @@ Sample results:
 
 * Find out whether the specified restricted asset has been frozen (returns `true` or `false`):
 
-  `/asset/MY_RESTRICTED/checkRestriction`
+  `/asset/MY_RESTRICTED/checkFrozen`
 
 * Retrieve a list of all qualifier assets (tags) which have been applied to the specified address:
 
@@ -273,11 +289,11 @@ Sample results:
 
 * Retrieve a list of all restricted assets which have frozen the specified address:
 
-  `/addr/mqHTNjpK5PaLKY3ZVpRRgsqpmMAtuAiRsR/restrictions`
+  `/addr/mqHTNjpK5PaLKY3ZVpRRgsqpmMAtuAiRsR/frozen`
 
 * Find out whether the specified address has been frozen wrt the specified restricted asset (returns `true` or `false`):
 
-  `/addr/mqHTNjpK5PaLKY3ZVpRRgsqpmMAtuAiRsRcheckRestriction/asset/MY_RESTRICTED`
+  `/addr/mqHTNjpK5PaLKY3ZVpRRgsqpmMAtuAiRsR/checkFrozen/asset/MY_RESTRICTED`
 
 * Find out whether the specified address has been tagged with the specified qualifier asset (tag) (returns `true` or `false`):
 
